@@ -33,7 +33,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 96px;
+  height: 240px;
 }
 .navbar .logo {
   font-size: 28px;
@@ -44,15 +44,17 @@ body {
 .navbar ul {
   list-style-type: none;
   display: flex;
-  gap: 24px;
+  gap: 8px;
 }
 .navbar ul li {
   font-weight: 300;
   cursor: pointer;
 }
 .navbar ul li .icon {
-  line-height: 0.9;
   font-weight: 300;
+  position: relative;
+  top: 3px;
+  font-size: 23px;
 }
 .navbar ul li a {
   color: #ffffff;
@@ -90,6 +92,15 @@ body {
   padding: 12px 24px;
   border: 1px solid #ffffff;
   border-radius: 0 16px;
+}
+.headline .cont-media {
+  margin-top: 50px;
+}
+.headline .cont-media a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-right: 24px;
 }
 .img{
     border-radius: 5px;
@@ -131,5 +142,8 @@ body {
       }
       .navigate{
         margin-top: 40px;
+      }
+      .headline .cont-media {
+        text-align: center;
       }
 }
