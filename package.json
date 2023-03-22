@@ -48,5 +48,6 @@
     "openssl-prebuilt": {
       "version": "1.0.2t"
     }
-  }
+  }, 
+  "start": "react-scripts --openssl-legacy-provider start" 
 }
