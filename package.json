@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "webpack": "^5.64.0",
     "@angular/animations": "~11.0.1",
     "@angular/common": "~11.0.1",
     "@angular/compiler": "~11.0.1",
@@ -48,6 +49,9 @@
     "openssl-prebuilt": {
       "version": "1.0.2t"
     }
-  }, 
+  },
+  "resolutions": {
+    "**/webpack/lib/util/createHash.js": "5.64.0"
+  },
   "start": "react-scripts --openssl-legacy-provider start" 
 }
