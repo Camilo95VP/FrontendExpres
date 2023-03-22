@@ -1,10 +1,12 @@
 <app-navBar></app-navBar>
+
+  
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-8 offset-lg-2">
             <div class="card">
-                <div class="card-body text-center">
-                    <span class="titulo">CLIENTES EXPRES FUMIGACIONES</span>
+                <div class="card-body">
+                    <span class="titulo">Clientes</span>
                     <button class="btn btn-warning float-end" routerLink="/crear-producto"><i class="fa fa-plus" aria-hidden="true"></i></button>
                     <table *ngIf="listProductos.length > 0" class="table table-striped mt-3">
                         <thead>
@@ -35,3 +37,4 @@
         </div>
     </div>
 </div>
+

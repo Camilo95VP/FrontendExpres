@@ -1,18 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-    background: #8E0E00;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+body{
+  background-image: url(../src/assets/media/IMG_4900.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
 
 .titulo {
     font-size: 1.8rem;
     font-family: 'Montserrat', sans-serif;
 }
 @media only screen and (max-width: 510px) {
-    body{
-        background-repeat: no-repeat;
-        background: white;
-    }
+
+body{
+  background-color: aliceblue !important;
+  background-image: none;
+}
 }

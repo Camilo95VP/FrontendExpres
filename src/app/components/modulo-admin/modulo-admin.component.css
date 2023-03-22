@@ -1,0 +1,13 @@
+.cont-admin{
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.cont-text{
+    text-align: left;
+}
+@media only screen and (max-width: 510px) {
+ .cont-admin{
+    width: 90%;
+ }
+}

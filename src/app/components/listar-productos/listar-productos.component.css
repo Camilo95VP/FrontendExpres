@@ -1,3 +1,9 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 .fas {
     cursor: pointer;
     margin-left: 7px;
@@ -6,9 +12,16 @@
     -webkit-box-shadow: 0px 0px 11px 3px rgba(2, 2, 2, 0.75) !important;
     -moz-box-shadow: 0px 0px 11px 3px rgba(48, 48, 48, 0.75)!important;
     box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.338)!important;
-    background-color: rgba(242, 242, 242, 0.906);
+    background-color: rgba(0, 0, 0, 0.756);
+    color: white;
 }
-
+.table>:not(caption)>*>* {
+    color: whitesmoke;
+}
+.titulo{
+    font-size: 20px;
+    font-weight: 100;
+}
 @media only screen and (max-width: 510px) {
 
     .card-body {
@@ -19,6 +32,9 @@
     .card{
         width: 135%;
     } 
+    .mt-5 {
+        margin-top: 7rem !important;
+    }
 }
 @media only screen and (max-width: 391px) {
 
@@ -28,6 +44,6 @@
         width: min-content;
     } 
     .card{
-        width: 165%;
+        width: 140%;
     } 
 }
