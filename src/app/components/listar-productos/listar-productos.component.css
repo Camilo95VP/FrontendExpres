@@ -1,0 +1,33 @@
+.fas {
+    cursor: pointer;
+    margin-left: 7px;
+}
+.card{
+    -webkit-box-shadow: 0px 0px 11px 3px rgba(2, 2, 2, 0.75) !important;
+    -moz-box-shadow: 0px 0px 11px 3px rgba(48, 48, 48, 0.75)!important;
+    box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.338)!important;
+    background-color: rgba(242, 242, 242, 0.906);
+}
+
+@media only screen and (max-width: 510px) {
+
+    .card-body {
+        flex: 1 1 auto;
+        padding: 1rem 1rem;
+        width: min-content;
+    } 
+    .card{
+        width: 135%;
+    } 
+}
+@media only screen and (max-width: 391px) {
+
+    .card-body {
+        flex: 1 1 auto;
+        padding: 1rem 1rem;
+        width: min-content;
+    } 
+    .card{
+        width: 165%;
+    } 
+}

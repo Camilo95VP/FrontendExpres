@@ -1,0 +1,10 @@
+.footer {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 170px;
+    font-style: italic;
+    font-size: 10px;
+    color: rgb(184, 163, 0);
+}
