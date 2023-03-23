@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-
+      
 jobs:
   deploy:
     name: Deploy
@@ -11,11 +11,6 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      - name: Download Artifact
-        uses: actions/download-artifact@master
-        with:
-          name: dist
-          path: dist
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
