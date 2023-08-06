@@ -11,7 +11,6 @@
   },
   "private": true,
   "dependencies": {
-    "webpack": "^5.64.0",
     "@angular/animations": "~11.0.1",
     "@angular/common": "~11.0.1",
     "@angular/compiler": "~11.0.1",
@@ -23,6 +22,7 @@
     "bootstrap": "^5.0.0-beta1",
     "ngx-toastr": "^13.2.0",
     "rxjs": "~6.6.0",
+    "sweetalert2": "^11.7.20",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
@@ -40,10 +40,12 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "mini-css-extract-plugin": "^2.7.6",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.2",
+    "webpack": "^5.88.2"
   },
   "config": {
     "openssl-prebuilt": {
@@ -53,5 +55,5 @@
   "resolutions": {
     "**/webpack/lib/util/createHash.js": "5.64.0"
   },
-  "start": "react-scripts --openssl-legacy-provider start" 
+  "start": "react-scripts --openssl-legacy-provider start"
 }
