@@ -1,0 +1,94 @@
+.custom-container {
+    -webkit-box-shadow: 0px 0px 11px 3px rgba(2, 2, 2, 0.75) !important;
+    -moz-box-shadow: 0px 0px 11px 3px rgba(48, 48, 48, 0.75)!important;
+    box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.338)!important;
+    background-color: rgba(0, 0, 0, 0.425);
+    color: white !important;
+    padding: 20px;
+}
+
+.table {
+    color: white;
+}
+
+h2 {
+    width: 20%;
+}
+
+.head-form {
+    background-color: rgba(0, 14, 14, 0.288);
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.btn {
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+  }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(236, 236, 236, 0.079);
+  }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(209, 209, 209, 0.2);
+  }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 90%;
+    width: 90%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+  .btn::after {
+    background-color: #f7f7f730;
+  }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+  #guardar {
+    background-color: green;
+    color: white;
+    height: 30px;
+  }
+  #cancelar {
+    background-color: rgb(224, 209, 0);
+    color: black;
+    height: 30px;
+  }
+  #editar {
+    background-color: rgb(0, 105, 242);
+    color: white;
+    height: 30px;
+  }
+  #eliminar {
+    background-color: rgba(255, 0, 0, 0.577);
+    color: white;
+    height: 30px;
+  }
+  #verregistros{
+    background-color:rgb(0, 114, 184);
+    color: white;
+    height: 30px;
+  }
+.accionesbtn{
+    display: grid;
+}

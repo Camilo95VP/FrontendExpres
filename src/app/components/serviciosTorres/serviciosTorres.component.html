@@ -1,0 +1,58 @@
+<div class="padre">
+  <h4>Registrar torre 🏬</h4>
+  <form (ngSubmit)="crearTorre()">
+    <div class="editar-form">
+
+      <div class="inputs">
+        <label for="residencia">Residencia:</label>
+        <input class="int" type="text" id="residencia" name="residencia" [(ngModel)]="nuevaTorre.residencia" required>
+      </div>
+
+      <div class="inputs">
+        <label for="nombre"># Torre:</label>
+        <input class="int" type="text" id="nombre" name="nombre" [(ngModel)]="nuevaTorre.nombre" required>
+      </div>
+
+      <div class="inputs">
+        <label for="apto"># Apto:</label>
+        <input class="int" type="text" id="apto" name="apto" [(ngModel)]="nuevaTorre.apto" required>
+      </div>
+
+      <div class="inputs">
+        <label for="fecha">Fecha servicio:</label>
+        <input class="int" type="date" id="fecha" name="fecha" [(ngModel)]="nuevaTorre.fecha" required>
+      </div>
+
+      <div class="inputs">
+        <label for="nombrePersona">Nombre propietario:</label>
+        <input class="int" type="text" id="nombrePersona" name="nombrePersona" [(ngModel)]="nuevaTorre.nombrePersona" required>
+      </div>
+
+      <div class="inputs">
+        <label for="celular">Celular:</label>
+        <input class="int" type="text" id="celular" name="celular" [(ngModel)]="nuevaTorre.celular" required>
+      </div>
+
+      <div class="inputs">
+        <label for="nivelInfestacion">Nivel de Infestación:</label>
+        <select class="int" id="nivelInfestacion" name="nivelInfestacion" [(ngModel)]="nuevaTorre.nivelInfestacion" required>
+          <option value="baja" class="verde">Baja</option>
+          <option value="moderada" class="amarillo">Moderada</option>
+          <option value="alta" class="naranja">Alta</option>
+          <option value="muyalta" class="rojo">Muy Alta</option>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="recomendaciones">Recomendaciones:</label>
+        <textarea class="int" id="recomendaciones" name="recomendaciones" [(ngModel)]="nuevaTorre.recomendaciones" required></textarea>
+      </div>
+
+      <div class="inputs">
+        <button class="btn" id="guardar" type="submit">Guardar ✔</button>
+        <button class="btn" id="cancelar" type="button" (click)="limpiarFormulario()">Cancelar ❌</button>
+        <button class="btn" id="verregistros" type="button" (click)="verRegistros()">Ver registros 👀</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,58 @@
+<div class="padre">
+  <h4>Editar Torre 🏢</h4>
+  <form (ngSubmit)="actualizarTorre()">
+    <div class="editar-form">
+      <div class="inputs">
+        <label for="residencia">Residencia:</label>
+        <input class="int" type="text" id="residencia" name="residencia" [(ngModel)]="torre.residencia" required>
+      </div>
+
+      <div class="inputs">
+        <label for="nombre"># Torre:</label>
+        <input class="int" type="text" id="nombre" name="nombre" [(ngModel)]="torre.nombre" required>
+      </div>
+
+      <div class="inputs">
+        <label for="apto"># Apto:</label>
+        <input class="int" type="text" id="apto" name="apto" [(ngModel)]="torre.apto" required>
+      </div>
+
+      <div class="inputs">
+        <label for="fecha">Fecha servicio:</label>
+        <input class="int" type="date" id="fecha" name="fecha" [(ngModel)]="torre.fecha" required>
+      </div>
+
+      <div class="inputs">
+        <label for="nombrePersona">Nombre propietario:</label>
+        <input class="int" type="text" id="nombrePersona" name="nombrePersona" [(ngModel)]="torre.nombrePersona" required>
+      </div>
+
+      <div class="inputs">
+        <label for="celular">Celular:</label>
+        <input class="int" type="text" id="celular" name="celular" [(ngModel)]="torre.celular" required>
+      </div>
+
+      <div class="inputs">
+        <label for="nivelInfestacion">Nivel de Infestación:</label>
+        <select class="int" id="nivelInfestacion" name="nivelInfestacion" [(ngModel)]="torre.nivelInfestacion" required>
+          <option value="baja" class="verde">Baja</option>
+          <option value="moderada" class="amarillo">Moderada</option>
+          <option value="alta" class="naranja">Alta</option>
+          <option value="muyalta" class="rojo">Muy Alta</option>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="recomendaciones">Recomendaciones:</label>
+        <textarea class="int" id="recomendaciones" name="recomendaciones" [(ngModel)]="torre.recomendaciones" required></textarea>
+      </div>
+
+      <div class="inputs">
+        <button class="btn" id="guardar" type="submit">Actualizar ✔</button>
+        <button class="btn" id="cancelar" type="button" (click)="limpiarFormulario()">Limpiar ❌</button>
+        <button class="btn" id="verregistros" type="button" (click)="verRegistros()">Ver registros 👀</button>
+      </div>
+    </div>
+  </form>
+</div>
+

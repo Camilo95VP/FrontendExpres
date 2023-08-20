@@ -8,6 +8,9 @@ import { ListarProductosComponent } from './components/listar-productos/listar-p
 import { ListarServiciosComponent } from './components/listar-servicios/listar-servicios.component';
 import { ModuloAdminComponent } from './components/modulo-admin/modulo-admin.component';
 import { CrearServicioComponent } from './components/crear-servicio/crear-servicio.component';
+import { ServiciosTorresComponent } from './components/serviciosTorres/serviciosTorres.component';
+import { ListarTorresComponent } from './components/listar-torres/listar-torres.component';
+import { EditarTorreComponent } from './components/editar-torre/editar-torre.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,7 +19,10 @@ const routes: Routes = [
   { path: 'listar-producto', component: ListarProductosComponent},
   { path: 'listar-servicio', component: ListarServiciosComponent},
   { path: 'editar-producto/:id', component: CrearProductoComponent },
+  { path: 'servicio-torres', component: ServiciosTorresComponent },
   { path: 'modulo-admin', component: ModuloAdminComponent},
+  { path: 'listar-torres', component: ListarTorresComponent},
+  { path: 'editar-torre/:id', component: EditarTorreComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
