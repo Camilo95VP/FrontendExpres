@@ -1,0 +1,51 @@
+
+<app-navBar></app-navBar>
+<div class="custom-container">
+  <h2>Nuevo Servicio</h2>
+
+  <form (submit)="crearServicio()">
+
+<div class="form-int">
+    <div class="form-group">
+      <input required="" type="text" class="input" id="nombreNegocio" [(ngModel)]="nuevoServicio.nombreNegocio" name="nombreNegocio">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="nombreNegocio">Nombre del Negocio:</label>
+    </div>
+
+    <div class="form-group">
+      <input required="" type="text" class="input" id="direccion" [(ngModel)]="nuevoServicio.direccion" name="direccion">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="direccion">Dirección:</label>
+    </div>
+
+    <div class="form-group">
+      <input required="" type="date" class="input" id="fecha" [(ngModel)]="nuevoServicio.fecha" name="fecha">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="fecha">Fecha:</label>
+    </div>
+
+    <div class="form-group">
+      <input required="" type="text" class="input" id="tipoServicio" [(ngModel)]="nuevoServicio.tipoServicio" name="tipoServicio">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="tipoServicio">Tipo de Servicio:</label>
+    </div>
+
+    <div class="form-group">
+      <input required="" type="number" class="input" id="precio" [(ngModel)]="nuevoServicio.precio" name="precio">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="precio">Precio:</label>
+    </div>
+
+  </div>
+  <div class="btns"> 
+    <button routerLink="/listar-servicio" class="btn btn-secondary">Volver</button>
+    <button type="submit" class="btn btn-success">Registrar</button>
+  </div>
+  </form>
+</div>
+

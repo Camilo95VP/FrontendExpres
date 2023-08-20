@@ -33,4 +33,10 @@ export class ProductoService {
   obtenerProducto(id: string): Observable<any> {
     return this.http.get(this.url + id);
   }
+
+  actualizarProducto(producto: Producto): Observable<any> {
+    return this.http.put(`${this.url}${producto._id}`, producto);
+  }
+  
+  
 }

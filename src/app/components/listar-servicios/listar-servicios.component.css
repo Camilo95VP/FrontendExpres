@@ -1,0 +1,61 @@
+.custom-container{
+    -webkit-box-shadow: 0px 0px 11px 3px rgba(2, 2, 2, 0.75) !important;
+    -moz-box-shadow: 0px 0px 11px 3px rgba(48, 48, 48, 0.75)!important;
+    box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.338)!important;
+    background-color: rgba(0, 0, 0, 0.425);
+    color: white !important;
+    padding: 20px
+}
+.table{
+    color: white;
+}
+h2{
+    width: 20%;
+}
+.head-form{
+    background-color: rgba(0, 14, 14, 0.288);
+    display: flex;
+    padding: 10px;
+    justify-content:space-between;
+    border-radius: 10px;
+}
+/* From uiverse.io by @alexruix */
+.input {
+    line-height: 28px;
+    border: 2px solid transparent;
+    border-bottom-color: #f1f1f1;
+    padding: .2rem 0;
+    outline: none;
+    background-color: transparent;
+    color: #0d0c22;
+    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    width: 35%;
+    margin-right: auto;
+   }
+   
+   .input:focus, input:hover {
+    outline: none;
+    padding: .2rem 1rem;
+    border-radius: 1rem;
+    border-color: lightblue;
+    color: yellow;
+   }
+   
+   .input::placeholder {
+    color: #d3d3d3;
+   }
+   
+   .input:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+   }
+   span{
+    margin-top:12px;
+    color: #0d0c22;
+   }
+   
+   
+   
+   
+   
+   

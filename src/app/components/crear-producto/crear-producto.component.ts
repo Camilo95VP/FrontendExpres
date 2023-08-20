@@ -13,7 +13,7 @@ import { ProductoService } from 'src/app/services/producto.service';
 export class CrearProductoComponent implements OnInit {
   productoForm: FormGroup;
   titulo = 'Registrar cliente';
-  id: string | null;
+  id: string | null = null;
   constructor(private fb: FormBuilder,
               private router: Router,
               private toastr: ToastrService,
@@ -25,33 +25,50 @@ export class CrearProductoComponent implements OnInit {
       ubicacion: ['', Validators.required],
       precio: ['', Validators.required],
     })
-    this.id = this.aRouter.snapshot.paramMap.get('id');
+
   }
 
   ngOnInit(): void {
+    this.id = this.aRouter.snapshot.paramMap.get('id');
     this.esEditar();
   }
 
   agregarProducto() {
-
     const PRODUCTO: Producto = {
+      _id: this.id, // Incluimos el id del producto en el objeto PRODUCTO
       nombre: this.productoForm.get('producto')?.value,
       categoria: this.productoForm.get('categoria')?.value,
       ubicacion: this.productoForm.get('ubicacion')?.value,
       precio: this.productoForm.get('precio')?.value,
-    }
-
-    console.log(PRODUCTO);
-    this._productoService.guardarProducto(PRODUCTO).subscribe(data => {
-      this.toastr.success('Cliente registrado con exito!', 'Cliente Registrado!');
-      this.router.navigate(['/listar-producto']);
-    }, error => {
-      console.log(error);
-      this.productoForm.reset();
-    })
-
+    };
   
+    if (this.id) {
+      // Si hay un identificador (id) significa que estamos actualizando un producto existente.
+      this._productoService.actualizarProducto(PRODUCTO).subscribe(
+        data => {
+          this.toastr.success('Cliente actualizado con éxito!', 'Cliente Actualizado');
+          this.router.navigate(['/listar-producto']);
+        },
+        error => {
+          console.log(error);
+          this.productoForm.reset();
+        }
+      );
+    } else {
+      // Si no hay un identificador, estamos creando un nuevo producto.
+      this._productoService.guardarProducto(PRODUCTO).subscribe(
+        data => {
+          this.toastr.success('Cliente registrado con éxito!', 'Cliente Registrado');
+          this.router.navigate(['/listar-producto']);
+        },
+        error => {
+          console.log(error);
+          this.productoForm.reset();
+        }
+      );
+    }
   }
+  
 
   esEditar() {
 

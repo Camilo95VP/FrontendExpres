@@ -11,20 +11,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
 import { ListarProductosComponent } from './components/listar-productos/listar-productos.component';
+import { ListarServiciosComponent } from './components/listar-servicios/listar-servicios.component';
 import { NavBarComponent } from './components/navBar/navBar.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModuloAdminComponent } from './components/modulo-admin/modulo-admin.component';
+import { CommonModule } from '@angular/common';
+import { CrearServicioComponent } from './components/crear-servicio/crear-servicio.component';
 
 @NgModule({
   declarations: [	
     AppComponent,
     CrearProductoComponent,
+    CrearServicioComponent,
     ListarProductosComponent,
       NavBarComponent,
       HomeComponent,
       FooterComponent,
-      ModuloAdminComponent
+      ModuloAdminComponent,
+      ListarServiciosComponent
    ],
   imports: [
     BrowserModule,
@@ -33,7 +38,8 @@ import { ModuloAdminComponent } from './components/modulo-admin/modulo-admin.com
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

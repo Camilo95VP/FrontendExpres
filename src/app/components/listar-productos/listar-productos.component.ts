@@ -51,7 +51,7 @@ export class ListarProductosComponent implements OnInit {
   eliminarProducto(id: any) {
     Swal.fire({
       title: '¿Estás seguro?',
-      text: 'Una vez eliminado, no podrás recuperar este producto',
+      text: 'Una vez eliminado, no podrás recuperar este cliente',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Sí, eliminar',
@@ -68,5 +68,18 @@ export class ListarProductosComponent implements OnInit {
       }
     });
   }
+
+  actualizarProducto(producto: Producto) {
+    this._productoService.actualizarProducto(producto).subscribe(
+      data => {
+        this.toastr.success('Producto actualizado con éxito!', 'Producto Actualizado');
+        this.obtenerProductos();
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+  
 
 }

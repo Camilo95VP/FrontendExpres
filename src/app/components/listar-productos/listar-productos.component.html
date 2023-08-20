@@ -1,46 +1,76 @@
 <app-navBar></app-navBar>
 
-  
-<div class="container mt-5">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Buscar por nombre" [(ngModel)]="searchTerm" (input)="onSearch()">
-  </div>
-    <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-            <div class="card">
-                <div class="card-body">
-                    <span class="titulo">Clientes</span>
-                    
-                    <button class="btn btn-warning float-end" routerLink="/crear-producto"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                    <table *ngIf="listProductos.length > 0" class="table table-striped mt-3">
-                        <thead>
-                          <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Correo</th>
-                            <th scope="col">Tipo de propiedad</th>
-                            <th scope="col">Telefono</th>
-                            <th scope="col"></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr *ngFor="let producto of listProductos">
-                            <ng-container *ngIf="producto.nombre.toLowerCase().includes(searchTerm.toLowerCase())">
-                              <td>{{ producto.nombre }}</td>
-                              <td>{{ producto.categoria }}</td>
-                              <td>{{ producto.ubicacion }}</td>
-                              <td>{{ producto.precio }}</td>
-                              <td>
-                                <i [routerLink]="['/editar-producto', producto._id]" class="fas fa-edit text-primary"></i>
-                                <i (click)="eliminarProducto(producto._id)" class="fas fa-trash text-danger"></i>
-                              </td>
-                            </ng-container>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <h5 style="text-align: start; margin-top: 10px; color: red;" *ngIf="listProductos.length == 0">No existen clientes para mostrar</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
+<div class="custom-container mt-5" style="width: 90%; margin: 0 auto;">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <h2>Clientes</h2>
+
+          <div class="form-group">
+
+            <div class="form-control">
+              <input type="value" required="" [(ngModel)]="searchTerm" (input)="onSearch()">
+              <label>
+                <span style="transition-delay:0ms">B</span>
+                <span style="transition-delay:50ms">u</span>
+                <span style="transition-delay:100ms">s</span>
+                <span style="transition-delay:150ms">c</span>
+                <span style="transition-delay:200ms">a</span>
+                <span style="transition-delay:250ms">r</span>
+                <span style="transition-delay:300ms"></span>
+                <span style="transition-delay:350ms">p</span>
+                <span style="transition-delay:350ms">o</span>
+                <span style="transition-delay:350ms">r</span>
+                <span style="transition-delay:350ms"></span>
+                <span style="transition-delay:350ms">n</span>
+                <span style="transition-delay:350ms">o</span>
+                <span style="transition-delay:350ms">m</span>
+                <span style="transition-delay:350ms">b</span>
+                <span style="transition-delay:350ms">r</span>
+                <span style="transition-delay:350ms">e</span>
+              </label>
+            </div>
+
+
+
+
+
+            <div class="searchbtn">
+              <button class="btn btn-warning float-end" routerLink="/crear-producto"><i class="fa fa-plus"
+                  aria-hidden="true"></i></button> <strong><span>Agregar cliente</span></strong>
+            </div>
+          </div>
+          <table *ngIf="listProductos.length > 0" class="table table-striped mt-3">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Tipo de propiedad</th>
+                <th scope="col">Telefono</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let producto of listProductos">
+                <ng-container *ngIf="producto.nombre.toLowerCase().includes(searchTerm.toLowerCase())">
+                  <td>{{ producto.nombre }}</td>
+                  <td>{{ producto.categoria }}</td>
+                  <td>{{ producto.ubicacion }}</td>
+                  <td>{{ producto.precio }}</td>
+                  <td>
+                    <i [routerLink]="['/editar-producto', producto._id]" class="fas fa-edit text-primary"></i>
+                    <i (click)="eliminarProducto(producto._id)" class="fas fa-trash text-danger"></i>
+                  </td>
+                </ng-container>
+              </tr>
+            </tbody>
+          </table>
+          <h5 style="text-align: start; margin-top: 10px; color: red;" *ngIf="listProductos.length == 0">No existen
+            clientes para mostrar</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

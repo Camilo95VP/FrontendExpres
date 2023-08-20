@@ -12,8 +12,8 @@
     -webkit-box-shadow: 0px 0px 11px 3px rgba(2, 2, 2, 0.75) !important;
     -moz-box-shadow: 0px 0px 11px 3px rgba(48, 48, 48, 0.75)!important;
     box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.338)!important;
-    background-color: rgba(0, 0, 0, 0.756);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.425);
+    color: white !important;
 }
 .table>:not(caption)>*>* {
     color: whitesmoke;
@@ -21,6 +21,22 @@
 .titulo{
     font-size: 20px;
     font-weight: 100;
+}
+.form-group {
+    display: flex;
+    gap: 30px;
+    
+}
+.searchbtn{
+    width: 100%;
+    text-align: right;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.searchbtn span{
+    position: relative;
+    right: 20px;
+    top: 5px;
 }
 
 @media only screen and (max-width: 510px) {
@@ -48,3 +64,50 @@
         width: 140%;
     } 
 }
+.form-control {
+    position: relative;
+    margin: 20px 0 20px;
+    background-color: transparent;
+    border: none;
+  }
+  
+  
+  .form-control input {
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+    background-color: transparent;
+    color: yellow;
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+  }
+  
+  .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 10;
+    pointer-events: none;
+    
+  }
+  
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: rgb(216, 216, 216);
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+  }
