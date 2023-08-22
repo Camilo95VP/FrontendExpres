@@ -7,7 +7,7 @@ import { Torre } from '../models/torres';
   providedIn: 'root',
 })
 export class TorresService {
-  private apiUrl = 'http://localhost:4000/api/torres';
+  private apiUrl = 'https://expresback.onrender.com/api/torres';
 
   constructor(private http: HttpClient) {}
 

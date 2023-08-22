@@ -8,7 +8,7 @@ import { Servicio } from '../models/servicios';
   providedIn: 'root',
 })
 export class ServiciosService {
-  private apiUrl = 'http://localhost:4000/api/servicios';
+  private apiUrl = 'https://expresback.onrender.com/api/servicios';
 
   constructor(private http: HttpClient) {}
 

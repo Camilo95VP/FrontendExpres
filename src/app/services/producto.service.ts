@@ -7,7 +7,7 @@ import { Producto } from '../models/producto';
   providedIn: 'root'
 })
 export class ProductoService {
-  url = 'http://localhost:4000/api/clientes/';
+  url = 'https://expresback.onrender.com/api/clientes/';
 
   constructor(private http: HttpClient) { }
 

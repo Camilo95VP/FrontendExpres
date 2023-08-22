@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "hosting-91cb7"
-  }
+    "default": "hosting-91cb7",
+    "hostingexpres": "hostingfrontexpres"
+  },
+  "targets": {},
+  "etags": {}
 }
