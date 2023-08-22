@@ -31,8 +31,8 @@ export class CrearServicioComponent implements OnInit {
   crearServicio(): void {
     this.serviciosService.crearServicio(this.nuevoServicio).subscribe(
       (servicio) => {
-        console.log('Nuevo servicio creado:', servicio);
-        this.toastr.success('Servicio registrado con éxito!', 'Servicio registrado');
+        console.log('Nueva venta:', servicio);
+        this.toastr.success('Venta registrada con éxito!', 'Venta registrada');
         this.router.navigate(['/listar-servicio']);
         this.nuevoServicio = {
           nombreNegocio: '',
@@ -43,7 +43,7 @@ export class CrearServicioComponent implements OnInit {
         };
       },
       (error) => {
-        console.log('Error al crear el servicio:', error);
+        console.log('Error al crear la venta:', error);
       }
     );
   }

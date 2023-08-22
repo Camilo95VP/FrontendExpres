@@ -30,4 +30,11 @@ export class TorresService {
   eliminarTorre(id: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
+
+  marcarMensajeEnviado(id: string): Observable<void> {
+    const url = `${this.apiUrl}/marcar-mensaje-enviado/${id}`;
+    return this.http.put<void>(url, {});
+  }
+
+  
 }

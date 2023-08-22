@@ -1,12 +1,31 @@
-<div class="custom-container mt-5" style="width: 90%; margin: 0 auto;">
+<app-navBar></app-navBar>
+<div class="custom-container mt-5" style="width: 97%; margin: 0 auto; padding: 0">
   <div class="head-form">
     <h2>Servicios</h2>
-    <button class="btn btn-primary float-end" routerLink="/servicio-torres"><i class="fa fa-plus" aria-hidden="true"></i> Registrar nueva torre</button>
+    <input type="text" class="form-control" placeholder="Residencia" [(ngModel)]="residencia">
+    <input type="text" class="form-control" placeholder="Torre" [(ngModel)]="torre">
+    <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="nombre">
+    <!-- <input type="date" class="form-control" [(ngModel)]="fecha"> -->
+
+
+    <select class="form-select" [(ngModel)]="estadoMensaje">
+      <option value="">Todos</option>
+      <option value="enviado">Enviado</option>
+      <option value="sin enviar">Sin Enviar</option>
+    </select>
+    <button class="btn" id="filtrar" type="button" (click)="filtrarTorres()">Filtrar <i class="fa fa-filter"
+        aria-hidden="true"></i></button>
+    <button class="btn" id="limpiar" type="button" (click)="limpiarFiltros()">Limpiar Filtros <i class="fa fa-broom"
+        aria-hidden="true"></i></button>
+
+    <button class="btn btn-primary float-end" id="nuevo" routerLink="/servicio-torres">Nuevo registro <i
+        class="fa fa-plus" aria-hidden="true"></i></button>
+
   </div>
   <table class="table">
     <thead>
-      <tr>
-         <th>Residencia</th>
+      <tr class="trs">
+        <th>Residencia</th>
         <th># Torre</th>
         <th># Apto</th>
         <th>Fecha</th>
@@ -14,25 +33,33 @@
         <th>Celular</th>
         <th>Nivel de Infestación</th>
         <th>Recomendaciones</th>
-        <th>Acciones</th> <!-- Nueva columna de acciones -->
+        <th>Estado del msj</th>
+        <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let torre of torres">
+      <tr *ngFor="let torre of (torresFiltradas.length > 0 ? torresFiltradas : torres)">
         <td>{{ torre.residencia }}</td>
         <td>{{ torre.nombre }}</td>
         <td>{{ torre.apto }}</td>
-        <td>{{ torre.fecha | date }}</td>
+        <td>{{ torre.fecha | date:'dd/MM/yyyy' }}</td>
         <td>{{ torre.nombrePersona }}</td>
         <td>{{ torre.celular }}</td>
-        <td>{{ torre.nivelInfestacion }}</td>
+        <td class="infestacion" [ngClass]="{ 
+          'baja': torre.nivelInfestacion === 'baja',
+          'mode': torre.nivelInfestacion === 'moderada',
+          'alta': torre.nivelInfestacion === 'alta',
+          'muyalta': torre.nivelInfestacion === 'muyalta'}">{{ torre.nivelInfestacion }}</td>
         <td>{{ torre.recomendaciones }}</td>
+        <td class="estado"
+          [ngClass]="{'enviado': torre.estadoMensaje === 'enviado', 'no-enviado': torre.estadoMensaje !== 'sin enviar'}">
+          {{ torre.estadoMensaje }}</td>
         <td>
-<div class="accionesbtn">
-          <button class="btn" id="editar" *ngIf="torre._id" (click)="editarTorre(torre._id)">Editar</button>
-          <button class="btn" id="guardar" *ngIf="torre._id" (click)="enviarMensaje(torre._id)">Enviar Mensaje</button>
-          <button class="btn" id="eliminar"  *ngIf="torre._id" (click)="eliminarTorre(torre._id)">Eliminar</button>
-        </div>
+          <div class="accionesbtn">
+            <button class="btn" id="editar" *ngIf="torre._id" (click)="editarTorre(torre._id)">Editar</button>
+            <button class="btn" id="guardar" *ngIf="torre._id" (click)="enviarMensaje(torre)">Enviar</button>
+            <button class="btn" id="eliminar" *ngIf="torre._id" (click)="eliminarTorre(torre._id)">Eliminar</button>
+          </div>
         </td>
       </tr>
     </tbody>

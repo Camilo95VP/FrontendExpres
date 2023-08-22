@@ -8,6 +8,7 @@ export class Torre {
   celular: string;
   nivelInfestacion: string;
   recomendaciones: string;
+  estadoMensaje: string = 'sin enviar';
 
   constructor(
     residencia: string, // Nueva columna
@@ -17,7 +18,8 @@ export class Torre {
     nombrePersona: string,
     celular: string,
     nivelInfestacion: string,
-    recomendaciones: string
+    recomendaciones: string,
+    estadoMensaje: string
   ) {
     this.residencia = residencia; // Nueva columna
     this.nombre = nombre;
@@ -27,5 +29,6 @@ export class Torre {
     this.celular = celular;
     this.nivelInfestacion = nivelInfestacion;
     this.recomendaciones = recomendaciones;
+    this.estadoMensaje = estadoMensaje
   }
 }

@@ -7,7 +7,7 @@
     margin-top: 30px
   }
   .editar-form {
-    background-color: #0000005c;
+    background-color: #00000086;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 5px;

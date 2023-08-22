@@ -20,7 +20,8 @@ export class EditarTorreComponent implements OnInit {
     celular: '',
     nivelInfestacion: '',
     recomendaciones: '',
-    residencia: '' // Añadida la propiedad residencia
+    residencia: '',
+    estadoMensaje: '',
   };
 
   constructor(
@@ -50,8 +51,8 @@ export class EditarTorreComponent implements OnInit {
     if (this.torre._id) {
       this.torresService.actualizarTorre(this.torre._id, this.torre).subscribe(
         (torreActualizada) => {
-          console.log('Torre actualizada:', torreActualizada);
-          this.toastr.success('Torre actualizada con éxito!', 'Torre actualizada');
+          console.log('Servicio actualizado:', torreActualizada);
+          this.toastr.success('Servicio actualizado con éxito!', 'Torre actualizada');
           this.router.navigate(['/listar-torres']);
         },
         (error) => {
@@ -70,7 +71,8 @@ export class EditarTorreComponent implements OnInit {
       nombrePersona: '',
       celular: '',
       nivelInfestacion: '',
-      recomendaciones: ''
+      recomendaciones: '',
+      estadoMensaje: '',
     };
   }
 

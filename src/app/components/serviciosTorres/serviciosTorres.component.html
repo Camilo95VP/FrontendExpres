@@ -1,5 +1,5 @@
 <div class="padre">
-  <h4>Registrar torre 🏬</h4>
+  <h4>Registrar servicio 🏬</h4>
   <form (ngSubmit)="crearTorre()">
     <div class="editar-form">
 
@@ -10,12 +10,12 @@
 
       <div class="inputs">
         <label for="nombre"># Torre:</label>
-        <input class="int" type="text" id="nombre" name="nombre" [(ngModel)]="nuevaTorre.nombre" required>
+        <input class="int" type="text" id="nombre" name="nombre" [(ngModel)]="nuevaTorre.nombre">
       </div>
 
       <div class="inputs">
         <label for="apto"># Apto:</label>
-        <input class="int" type="text" id="apto" name="apto" [(ngModel)]="nuevaTorre.apto" required>
+        <input class="int" type="text" id="apto" name="apto" [(ngModel)]="nuevaTorre.apto">
       </div>
 
       <div class="inputs">
@@ -50,7 +50,7 @@
 
       <div class="inputs">
         <button class="btn" id="guardar" type="submit">Guardar ✔</button>
-        <button class="btn" id="cancelar" type="button" (click)="limpiarFormulario()">Cancelar ❌</button>
+        <button class="btn" id="cancelar" type="button" (click)="limpiarFormulario()">Limpiar 🧺</button>
         <button class="btn" id="verregistros" type="button" (click)="verRegistros()">Ver registros 👀</button>
       </div>
     </div>

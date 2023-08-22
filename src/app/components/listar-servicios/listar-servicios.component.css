@@ -9,9 +9,7 @@
 .table{
     color: white;
 }
-h2{
-    width: 20%;
-}
+
 .head-form{
     background-color: rgba(0, 14, 14, 0.288);
     display: flex;
@@ -53,7 +51,14 @@ h2{
     margin-top:12px;
     color: #0d0c22;
    }
-   
+   .table>:not(caption)>*>* {
+    padding: 0.5rem;
+    color: var(--bs-table-color-state,var(--bs-table-color-type,var(--bs-table-color)));
+    background-color: rgba(0, 0, 0, 0.426);
+    color: white;
+    border-bottom-width: var(--bs-border-width);
+    box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state,var(--bs-table-bg-type,var(--bs-table-accent-bg)));
+  }
    
    
    

@@ -18,7 +18,8 @@ export class ServiciosTorresComponent implements OnInit {
     nombrePersona: '',
     celular: '',
     nivelInfestacion: '',
-    recomendaciones: ''
+    recomendaciones: '',
+    estadoMensaje: '',
   };
 
   constructor(
@@ -31,8 +32,8 @@ export class ServiciosTorresComponent implements OnInit {
   crearTorre(): void {
     this.torresService.crearTorre(this.nuevaTorre).subscribe(
       (torre) => {
-        console.log('Nueva torre creada:', torre);
-        this.toastr.success('Torre registrada con éxito!', 'Torre registrada');
+        console.log('Nuevo servicio creado:', torre);
+        this.toastr.success('Servicio registrado con éxito!', 'Servicio registrado');
         this.limpiarFormulario();
         this.nuevaTorre = {
           residencia: '',
@@ -42,8 +43,11 @@ export class ServiciosTorresComponent implements OnInit {
           nombrePersona: '',
           celular: '',
           nivelInfestacion: '',
-          recomendaciones: ''
+          recomendaciones: '',
+          estadoMensaje: '',
         };
+        this.router.navigate(['/listar-torres']); 
+        console.log("fecha nueva torre:" + this.nuevaTorre.fecha);
       },
       (error) => {
         console.log('Error al crear la torre:', error);
@@ -60,12 +64,12 @@ export class ServiciosTorresComponent implements OnInit {
       nombrePersona: '',
       celular: '',
       nivelInfestacion: '',
-      recomendaciones: ''
+      recomendaciones: '',
+      estadoMensaje: '',
     };
   }
 
   verRegistros(): void {
-
     this.router.navigate(['/listar-torres']); 
   }
 }

@@ -16,7 +16,7 @@ import { NavBarComponent } from './components/navBar/navBar.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModuloAdminComponent } from './components/modulo-admin/modulo-admin.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { CrearServicioComponent } from './components/crear-servicio/crear-servicio.component';
 import { ServiciosTorresComponent } from './components/serviciosTorres/serviciosTorres.component';
 import { ListarTorresComponent } from './components/listar-torres/listar-torres.component';
@@ -47,7 +47,8 @@ import { EditarTorreComponent } from './components/editar-torre/editar-torre.com
     HttpClientModule,
     CommonModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DatePipe],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
