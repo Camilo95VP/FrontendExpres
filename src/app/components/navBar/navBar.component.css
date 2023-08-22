@@ -100,12 +100,13 @@ body {
       }
       .navbar ul{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2px;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 40px;
       }
       .navigate{
-        margin-top: 40px;
-      }
+        margin-top: 20px;
+        margin-left: 100px;
+      width: 500px !important;}
 }
 
 
