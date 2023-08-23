@@ -21,6 +21,7 @@ import { CrearServicioComponent } from './components/crear-servicio/crear-servic
 import { ServiciosTorresComponent } from './components/serviciosTorres/serviciosTorres.component';
 import { ListarTorresComponent } from './components/listar-torres/listar-torres.component';
 import { EditarTorreComponent } from './components/editar-torre/editar-torre.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [	
@@ -36,6 +37,7 @@ import { EditarTorreComponent } from './components/editar-torre/editar-torre.com
       ServiciosTorresComponent,
       ListarTorresComponent,
       EditarTorreComponent,
+      LoadingSpinnerComponent
    ],
   imports: [
     BrowserModule,

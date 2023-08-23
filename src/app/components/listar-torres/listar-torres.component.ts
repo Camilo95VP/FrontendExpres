@@ -14,6 +14,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./listar-torres.component.css']
 })
 export class ListarTorresComponent implements OnInit {
+  isLoadingbd: boolean = true;
+
   filtroForm: FormGroup;
   torresFiltradas: Torre[] = [];
   torres: Torre[] = [];
@@ -45,7 +47,7 @@ export class ListarTorresComponent implements OnInit {
     this.torresService.obtenerTorres().subscribe(
       (torres) => {
         this.torres = torres;
-        console.log(torres);
+        this.isLoadingbd = false;
       },
       (error) => {
         console.log('Error al obtener las torres:', error);

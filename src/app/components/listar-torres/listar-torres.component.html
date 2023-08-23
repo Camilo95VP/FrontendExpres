@@ -22,46 +22,57 @@
         class="fa fa-plus" aria-hidden="true"></i></button>
 
   </div>
-  <table class="table">
-    <thead>
-      <tr class="trs">
-        <th>Residencia</th>
-        <th># Torre</th>
-        <th># Apto</th>
-        <th>Fecha</th>
-        <th>Nombre</th>
-        <th>Celular</th>
-        <th>Nivel de Infestación</th>
-        <th>Recomendaciones</th>
-        <th>Estado del msj</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let torre of (torresFiltradas.length > 0 ? torresFiltradas : torres)">
-        <td>{{ torre.residencia }}</td>
-        <td>{{ torre.nombre }}</td>
-        <td>{{ torre.apto }}</td>
-        <td>{{ torre.fecha | date:'dd/MM/yyyy' }}</td>
-        <td>{{ torre.nombrePersona }}</td>
-        <td>{{ torre.celular }}</td>
-        <td class="infestacion" [ngClass]="{ 
+
+  <ng-container *ngIf="isLoadingbd; else content">
+    <!-- Spinner de carga -->
+    <div class="loading">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+  </ng-container>
+
+
+  <ng-template #content>
+    <table class="table">
+      <thead>
+        <tr class="trs">
+          <th>Residencia</th>
+          <th># Torre</th>
+          <th># Apto</th>
+          <th>Fecha</th>
+          <th>Nombre</th>
+          <th>Celular</th>
+          <th>Nivel de Infestación</th>
+          <th>Recomendaciones</th>
+          <th>Estado del msj</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let torre of (torresFiltradas.length > 0 ? torresFiltradas : torres)">
+          <td>{{ torre.residencia }}</td>
+          <td>{{ torre.nombre }}</td>
+          <td>{{ torre.apto }}</td>
+          <td>{{ torre.fecha | date:'dd/MM/yyyy' }}</td>
+          <td>{{ torre.nombrePersona }}</td>
+          <td>{{ torre.celular }}</td>
+          <td class="infestacion" [ngClass]="{ 
           'baja': torre.nivelInfestacion === 'baja',
           'mode': torre.nivelInfestacion === 'moderada',
           'alta': torre.nivelInfestacion === 'alta',
           'muyalta': torre.nivelInfestacion === 'muyalta'}">{{ torre.nivelInfestacion }}</td>
-        <td>{{ torre.recomendaciones }}</td>
-        <td class="estado"
-          [ngClass]="{'enviado': torre.estadoMensaje === 'enviado', 'no-enviado': torre.estadoMensaje !== 'sin enviar'}">
-          {{ torre.estadoMensaje }}</td>
-        <td>
-          <div class="accionesbtn">
-            <button class="btn" id="editar" *ngIf="torre._id" (click)="editarTorre(torre._id)">Editar</button>
-            <button class="btn" id="guardar" *ngIf="torre._id" (click)="enviarMensaje(torre)">Enviar</button>
-            <button class="btn" id="eliminar" *ngIf="torre._id" (click)="eliminarTorre(torre._id)">Eliminar</button>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+          <td>{{ torre.recomendaciones }}</td>
+          <td class="estado"
+            [ngClass]="{'enviado': torre.estadoMensaje === 'enviado', 'no-enviado': torre.estadoMensaje !== 'sin enviar'}">
+            {{ torre.estadoMensaje }}</td>
+          <td>
+            <div class="accionesbtn">
+              <button class="btn" id="editar" *ngIf="torre._id" (click)="editarTorre(torre._id)">Editar</button>
+              <button class="btn" id="guardar" *ngIf="torre._id" (click)="enviarMensaje(torre)">Enviar</button>
+              <button class="btn" id="eliminar" *ngIf="torre._id" (click)="eliminarTorre(torre._id)">Eliminar</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+</ng-template>
