@@ -5,17 +5,16 @@
         <nav class="navbar">
             <img routerLink="/" class="img" alt="img" src="../../../assets/LogoExpres.png" width="200px" height="50px" >
             <div class="navigate">
-            <ul>
-                <li><a  routerLink="/servicio-torres">Servicios</a></li>
-                <li><a  routerLink="/listar-producto">Clientes</a></li>
-                <li><a  routerLink="/listar-servicio">Ventas</a></li>
-                <li><a>Documentos</a></li>
-                <li><a>Productos</a>
-                <li><a href="#" class="cerrar-sesion">Cerrar sesion</a></li>
-                <li>
-                <span class="material-symbols-outlined icon"> search </span>
-                </li>
-            </ul>
+
+                <div class="accionesbtn">
+                    <button class="btn" (click)="serviciosRedirect()">Servicios</button>
+                    <button class="btn" (click)="clientesRedirect()">Clientes</button>
+                    <button class="btn" (click)="ventasRedirect()">ventas</button>
+                    <button class="btn" >Documentos</button>
+                    <button class="btn" >Productos</button>
+                    <button class="btn"  id="salir" (click)="salir()">Salir</button>
+                  </div>
+
             </div>
         </nav>
     </div>

@@ -43,7 +43,8 @@
           <th>Celular</th>
           <th>Nivel de Infestación</th>
           <th>Recomendaciones</th>
-          <th>Estado del msj</th>
+          <th>Certificado</th>
+          <th>Técnico</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -64,6 +65,7 @@
           <td class="estado"
             [ngClass]="{'enviado': torre.estadoMensaje === 'enviado', 'no-enviado': torre.estadoMensaje !== 'sin enviar'}">
             {{ torre.estadoMensaje }}</td>
+          <td>{{torre.tecnico}}</td>
           <td>
             <div class="accionesbtn">
               <button class="btn" id="editar" *ngIf="torre._id" (click)="editarTorre(torre._id)">Editar</button>
@@ -75,4 +77,4 @@
       </tbody>
     </table>
 
-</ng-template>
+  </ng-template>

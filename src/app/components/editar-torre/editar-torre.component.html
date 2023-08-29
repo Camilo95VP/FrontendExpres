@@ -46,6 +46,11 @@
         <label for="recomendaciones">Recomendaciones:</label>
         <textarea class="int" id="recomendaciones" name="recomendaciones" [(ngModel)]="torre.recomendaciones" required></textarea>
       </div>
+      
+      <div class="inputs">
+        <label for="tecnico">Tecnico:</label>
+        <input class="int" type="text" id="tecnico" name="tecnico" [(ngModel)]="torre.tecnico" required>
+      </div>
 
       <div class="inputs">
         <button class="btn" id="guardar" type="submit">Actualizar ✔</button>

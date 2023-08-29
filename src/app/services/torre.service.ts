@@ -6,6 +6,8 @@ import { Torre } from '../models/torres';
 @Injectable({
   providedIn: 'root',
 })
+//https://expresback.onrender.com
+//http://localhost:4000
 export class TorresService {
   private apiUrl = 'https://expresback.onrender.com/api/torres';
 

@@ -10,12 +10,12 @@
 
       <div class="inputs">
         <label for="nombre"># Torre:</label>
-        <input class="int" type="text" id="nombre" name="nombre" [(ngModel)]="nuevaTorre.nombre">
+        <input class="int" type="number" id="nombre" name="nombre" [(ngModel)]="nuevaTorre.nombre">
       </div>
 
       <div class="inputs">
         <label for="apto"># Apto:</label>
-        <input class="int" type="text" id="apto" name="apto" [(ngModel)]="nuevaTorre.apto">
+        <input class="int" type="number" id="apto" name="apto" [(ngModel)]="nuevaTorre.apto">
       </div>
 
       <div class="inputs">
@@ -29,8 +29,8 @@
       </div>
 
       <div class="inputs">
-        <label for="celular">Celular:</label>
-        <input class="int" type="text" id="celular" name="celular" [(ngModel)]="nuevaTorre.celular" required>
+        <label for="celular">Celular propietario:</label>
+        <input class="int" type="number" id="celular" name="celular" [(ngModel)]="nuevaTorre.celular" required>
       </div>
 
       <div class="inputs">
@@ -46,6 +46,11 @@
       <div class="inputs">
         <label for="recomendaciones">Recomendaciones:</label>
         <textarea class="int" id="recomendaciones" name="recomendaciones" [(ngModel)]="nuevaTorre.recomendaciones" required></textarea>
+      </div>
+
+      <div class="inputs">
+        <label for="tecnico">Técnico:</label>
+        <input class="int" type="text" id="tecnico" name="tecnico" [(ngModel)]="nuevaTorre.tecnico" required>
       </div>
 
       <div class="inputs">

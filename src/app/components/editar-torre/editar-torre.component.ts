@@ -22,6 +22,7 @@ export class EditarTorreComponent implements OnInit {
     recomendaciones: '',
     residencia: '',
     estadoMensaje: '',
+    tecnico: ''
   };
 
   constructor(
@@ -73,6 +74,7 @@ export class EditarTorreComponent implements OnInit {
       nivelInfestacion: '',
       recomendaciones: '',
       estadoMensaje: '',
+      tecnico: ''
     };
   }
 

@@ -20,6 +20,7 @@ export class ServiciosTorresComponent implements OnInit {
     nivelInfestacion: '',
     recomendaciones: '',
     estadoMensaje: '',
+    tecnico: ''
   };
 
   constructor(
@@ -45,6 +46,7 @@ export class ServiciosTorresComponent implements OnInit {
           nivelInfestacion: '',
           recomendaciones: '',
           estadoMensaje: '',
+          tecnico: ''
         };
         this.router.navigate(['/listar-torres']); 
         console.log("fecha nueva torre:" + this.nuevaTorre.fecha);
@@ -66,6 +68,7 @@ export class ServiciosTorresComponent implements OnInit {
       nivelInfestacion: '',
       recomendaciones: '',
       estadoMensaje: '',
+      tecnico: ''
     };
   }
 

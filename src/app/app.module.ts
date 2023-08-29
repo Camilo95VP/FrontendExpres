@@ -24,21 +24,21 @@ import { EditarTorreComponent } from './components/editar-torre/editar-torre.com
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     CrearProductoComponent,
     CrearServicioComponent,
     ListarProductosComponent,
-      NavBarComponent,
-      HomeComponent,
-      FooterComponent,
-      ModuloAdminComponent,
-      ListarServiciosComponent,
-      ServiciosTorresComponent,
-      ListarTorresComponent,
-      EditarTorreComponent,
-      LoadingSpinnerComponent
-   ],
+    NavBarComponent,
+    HomeComponent,
+    FooterComponent,
+    ModuloAdminComponent,
+    ListarServiciosComponent,
+    ServiciosTorresComponent,
+    ListarTorresComponent,
+    EditarTorreComponent,
+    LoadingSpinnerComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -51,6 +51,6 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent],
-  
+
 })
 export class AppModule { }

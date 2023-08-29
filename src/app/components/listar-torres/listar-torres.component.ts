@@ -41,6 +41,7 @@ export class ListarTorresComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerTorres();
+    console.log("torres desde on init" + this.obtenerTorres())
   }
 
   obtenerTorres(): void {
